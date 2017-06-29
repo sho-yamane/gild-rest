@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
-<?php _e('test', 'gildrest'); ?>
+<main class="main" id="main">日本語とEnglishのテストやで</main>
+
 
 <?php get_footer(); ?>

@@ -2374,3 +2374,28 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show; }
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold; }
+
+body {
+  font-size: 14px;
+  font-family: "Poppins", "Yu Gothic", YuGothic, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Meiryo, sans-serif;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  letter-spacing: .01em;
+  text-align: left;
+  line-height: 1.7;
+  color: #232323; }
+
+main {
+  margin: 120px 0;
+  text-align: center;
+  font-size: 32px; }

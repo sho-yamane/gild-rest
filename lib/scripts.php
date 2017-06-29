@@ -8,4 +8,4 @@ if (! function_exists('gildrest_scripts')) {
 		wp_enqueue_script( 'gildrest-scripts', get_template_directory_uri() . '/dist/js/app.min.js', array(), $the_theme->get( 'Version' ), true );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'gildrest_scripts' );
+add_action('wp_enqueue_scripts', 'gildrest_scripts');

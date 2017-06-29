@@ -16,6 +16,7 @@ var imagePath = {
   src:  './img',
   dist: './dist'
 };
+var gettext = require('gulp-gettext');
 
 gulp.task('sass', function() {
   gulp.src('./sass/*.scss')
@@ -48,4 +49,17 @@ gulp.task('optimizeImage', function() {
     .pipe(gulp.dest(imagePath.dist));
 });
 
-gulp.task('go', ['sass', 'scripts', 'optimizeImage'], function () { });
+gulp.task('gettext', function() {
+  gulp.src('./lang/*.po')
+    .pipe(plumber({
+    handleError: function (err) {
+      console.log(err);
+      this.emit('end');
+    }
+  }))
+  .pipe(gettext())
+  .pipe(gulp.dest('./lang'))
+  ;
+});
+
+gulp.task('go', ['sass', 'scripts', 'optimizeImage', 'gettext'], function () { });

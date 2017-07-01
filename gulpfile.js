@@ -17,10 +17,13 @@ var imagePath = {
   dist: './dist'
 };
 var gettext = require('gulp-gettext');
+var watch = require('gulp-watch');
+var notify = require('gulp-notify');
+
 
 gulp.task('sass', function() {
   gulp.src('./sass/*.scss')
-    .pipe(plumber())
+    .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/css'))
@@ -34,11 +37,13 @@ gulp.task('scripts', function() {
     './js/app.js'
   ];
   gulp.src(scripts)
+    .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(concat('app.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'));
 
   gulp.src(scripts)
+    .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./dist/js'));
 });
@@ -51,15 +56,18 @@ gulp.task('optimizeImage', function() {
 
 gulp.task('gettext', function() {
   gulp.src('./lang/*.po')
-    .pipe(plumber({
-    handleError: function (err) {
-      console.log(err);
-      this.emit('end');
-    }
-  }))
-  .pipe(gettext())
-  .pipe(gulp.dest('./lang'))
-  ;
+    .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
+    .pipe(gettext())
+    .pipe(gulp.dest('./lang'));
 });
 
+//total
 gulp.task('go', ['sass', 'scripts', 'optimizeImage', 'gettext'], function () { });
+
+//watch
+gulp.task('watch', () => {
+  gulp.watch('./sass/**/*',   ['sass']);
+  gulp.watch('./js/*',        ['scripts']);
+  gulp.watch('./img/*',       ['optimizeImage']);
+  gulp.watch('./lang/*.po',   ['gettext']);
+});

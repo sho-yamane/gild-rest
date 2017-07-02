@@ -1,0 +1,153 @@
+@keyframes bkX {
+  0% {
+    width: 0%;
+    transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(102%);
+  }
+}
+
+@keyframes bkheadlineX {
+  0% {
+    width: 0%;
+    transform: translateX(-100%);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(102%);
+  }
+}
+
+@keyframes bkY {
+  0% {
+    height: 0%;
+    transform: translateY(0);
+  }
+  50% {
+    height: 100%;
+    transform: translateY(0);
+  }
+  100% {
+    height: 100%;
+    transform: translateY(102%);
+  }
+}
+
+@keyframes bkTextImg {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menuButton {
+	0% { transform: scale(0); }
+	80% { transform: scale(1.1); }
+	90% { transform: scale(0.9); }
+	100% { transform: scale(1); }
+}
+
+@keyframes menuButtonHover {
+	0% { transform: scale(1); }
+	20% { transform: scale(1.1); }
+	40% { transform: scale(0.9); }
+	60% { transform: scale(1.05); }
+	80% { transform: scale(0.92); }
+	100% { transform: scale(1); }
+}
+
+@keyframes copyBrdrLeft {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes copyBrdrRight {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes copyBrdrBottom {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes copyBrdrTop {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes copyBk {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes copyDes {
+  0% {
+    opacity: 0;
+    transform: translateX(-7px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes topHeader {
+  0% {
+    filter: blur(15px);
+    transform: scale(1.1);
+  }
+  100% {
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+@keyframes scroollLine {
+  0% {
+    transform: translateY(-100%);
+  }
+  80% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

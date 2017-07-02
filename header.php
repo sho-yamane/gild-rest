@@ -11,32 +11,65 @@
 
 <body <?php body_class(); ?>>
 
-<!-- Your site title as branding in the menu -->
-<?php if ( ! has_custom_logo() ) { ?>
+	<div class="menu-mask" id="js-mask"></div>
 
-	<?php if ( is_front_page() && is_home() ) : ?>
+	<header class="header" id="header">
 
-		<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="logo">
+			<?php if (! has_custom_logo()) : ?>
+				<?php if (is_front_page() && is_home()) : ?>
+					<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else : ?>
+					<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<?php endif; ?>
+			<?php else : ?>
+				<?php the_custom_logo(); ?>
+			<?php endif; ?>
+		</div>
 
-	<?php else : ?>
+		<div class="menu-btn-container" id="js-btn">
+			<a class="menu-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
 
-		<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+		<nav class="menu" id="js-menu">
+			<?php wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container_class' => 'menu-container',
+					'menu_class'      => 'menu-lists',
+					'fallback_cb'     => '',
+					'menu_id'         => 'primary-menu'
+				)
+			); ?>
+		</nav>
 
-	<?php endif; ?>
+		<div class="header-inner">
 
+			<?php $header_image = get_header_image(); ?>
+			<?php if (! empty($header_image)) : ?>
+				<div class="header-background" style="background-image: url(<?php header_image(); ?>);"></div>
+			<?php endif;?>
 
-<?php } else {
-	the_custom_logo();
-} ?><!-- end custom logo -->
+			<?php if (is_front_page() && is_home() && get_bloginfo('description')) : ?>
 
+				<div class="copy">
+					<div class="copy-background"></div>
+					<div class="brdr brdr-left"></div>
+					<div class="brdr brdr-bottom"></div>
+					<div class="brdr brdr-right"></div>
+					<div class="brdr brdr-top"></div>
+					<h2 class="description"><?php echo esc_attr( get_bloginfo('description', 'display')); ?></h2>
+				</div>
+			<?php endif;?>
 
-<?php wp_nav_menu(
-	array(
-		'theme_location'  => 'primary',
-		'container_class' => 'collapse navbar-collapse',
-		'container_id'    => 'navbarNavDropdown',
-		'menu_class'      => 'navbar-nav',
-		'fallback_cb'     => '',
-		'menu_id'         => 'main-menu'
-	)
-); ?>
+		</div>
+
+		<div class="scroll-down">
+			<div class="line"></div>
+		</div>
+
+	</header>

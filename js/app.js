@@ -6,7 +6,6 @@
     $('#js-mask').toggleClass('is-active');
   });
 
-
   $(window).scroll(function (){
     $("#js-main-index").each(function(){
       var offsetTop = $(this).offset().top;

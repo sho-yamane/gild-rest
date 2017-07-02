@@ -13,7 +13,11 @@
 
 	<div class="menu-mask" id="js-mask"></div>
 
-	<header class="header" id="header">
+	<?php if (is_front_page() && is_home()) : ?>
+		<header class="header header-top" id="header">
+	<?php else : ?>
+		<header class="header" id="header">
+	<?php endif; ?>
 
 		<div class="logo">
 			<?php if (! has_custom_logo()) : ?>
@@ -68,8 +72,10 @@
 
 		</div>
 
-		<div class="scroll-down">
-			<div class="line"></div>
-		</div>
+		<?php if (is_front_page() && is_home()) : ?>
+			<div class="scroll-down">
+				<div class="line"></div>
+			</div>
+		<?php endif; ?>
 
 	</header>

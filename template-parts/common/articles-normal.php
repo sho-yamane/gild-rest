@@ -10,15 +10,17 @@
       <?php else: ?>
         <figure class="post-thumbnail" style="background-image: url('<?php echo esc_attr(get_template_directory_uri() . '/img/no-image.jpg') ?>');">
       <?php endif; ?>
-          <div class="post-category">
-            <?php
-              $cat_output = '';
-              foreach((get_the_category()) as $cat){
-                $cat_output .= $cat->cat_name . ',';
-              }
-              echo esc_html(rtrim($cat_output, ","));
-            ?>
-          </div>
+          <?php if (get_the_category()) : ?>
+            <div class="post-category">
+              <?php
+                $cat_output = '';
+                foreach((get_the_category()) as $cat){
+                  $cat_output .= $cat->cat_name . ',';
+                }
+                echo esc_html(rtrim($cat_output, ","));
+              ?>
+            </div>
+          <?php endif; ?>
           <div class="post-author">
             <span class="avatar"><?php echo get_avatar(get_the_author_meta('ID'), 16); ?></span>
             <span class="name"><?php the_author_meta('display_name'); ?></span>

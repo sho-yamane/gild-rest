@@ -19,7 +19,9 @@
             'next_text' => '<i class="fa fa-caret-right" aria-hidden="true"></i>',
           )); ?>
         <?php else : ?>
-            <?php get_template_part('template-parts/common/articles-none'); ?>
+          <div class="no-articles">
+            <?php esc_html_e('No Results Found.', 'gildrest'); ?>
+          </div>
         <?php endif; ?>
       </div>
     </div>

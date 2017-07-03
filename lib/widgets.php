@@ -10,7 +10,6 @@ if (! function_exists('gildrest_widgets')) {
 
 add_action('after_setup_theme', 'gildrest_widgets');
 
-
 if (! function_exists('gildrest_widgets_init')) {
 	function gildrest_widgets_init() {
 		register_sidebar( array(

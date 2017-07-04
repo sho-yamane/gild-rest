@@ -28,15 +28,19 @@
 
 		<?php
       wp_link_pages( array(
-        'before' => '<div class="page-links">' . __('Pages:', 'gildrest'),
+        'before' => '<div class="post-links">' . __('Pages:', 'gildrest'),
         'after'  => '</div>',
       ) );
 		?>
 
 	</div>
 
-	<footer class="post-footer">
-
-	</footer>
+  <footer class="post-footer">
+    <?php if (get_the_tags()) : ?>
+      <div class="post-tags">
+        <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+      </div>
+    <?php endif ; ?>
+  </footer>
 
 </article>

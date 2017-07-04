@@ -6,6 +6,8 @@
 
 		<?php get_template_part('template-parts/single/content'); ?>
 
+    <?php get_template_part('template-parts/common/prev-next'); ?>
+
     <?php
       if ( comments_open() || get_comments_number() ) :
         comments_template();

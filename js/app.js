@@ -19,4 +19,12 @@
     });
   });
 
+	$('#is-comment-tabs li').click(function() {
+    var index = $('#is-comment-tabs li').index(this);
+		$('#is-comment-list > ol').css('display','none');
+		$('#is-comment-list > ol').eq(index).css('display','block');
+		$('#is-comment-tabs li').removeClass('active');
+		$(this).addClass('active')
+	});
+
 })(jQuery);

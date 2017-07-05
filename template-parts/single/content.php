@@ -12,7 +12,9 @@
         <time class="post-time" datetime="<?php the_time('c'); ?>"><?php the_time(get_option('date_format')); ?></time>
         <div class="post-author">
           <span class="avatar"><?php echo get_avatar(get_the_author_meta('ID'), 16); ?></span>
-          <span class="name"><?php the_author_meta('display_name'); ?></span>
+          <span class="name">
+            <?php the_author_posts_link(); ?>
+          </span>
         </div>
       </div>
       <?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
@@ -28,8 +30,10 @@
 
 		<?php
       wp_link_pages( array(
-        'before' => '<div class="post-links">' . __('Pages:', 'gildrest'),
+        'before' => '<div class="post-links">',
         'after'  => '</div>',
+        'link_before' => '<span>',
+        'link_after'  => '</span>',
       ) );
 		?>
 

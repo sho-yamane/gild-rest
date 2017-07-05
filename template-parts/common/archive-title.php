@@ -36,27 +36,29 @@
 
   <div class="title-container">
     <h1><?php the_time(__('jS F, Y', 'gildrest')); ?></h1>
-    <div class="title-description"><?php esc_html_e('Daily Archive', 'gildrest'); ?></div>
+    <div class="title-description"><?php esc_html_e('Daily Archives', 'gildrest'); ?></div>
   </div>
 
 <?php elseif ( is_month() ): ?>
 
   <div class="title-container">
     <h1><?php the_time(__('F, Y', 'gildrest')); ?></h1>
-    <div class="title-description"><?php esc_html_e('Monthly Archive', 'gildrest'); ?></div>
+    <div class="title-description"><?php esc_html_e('Monthly Archives', 'gildrest'); ?></div>
   </div>
 
 <?php elseif ( is_year() ): ?>
 
   <div class="title-container">
     <h1><?php the_time(__('Y', 'gildrest')); ?></h1>
-    <div class="title-description"><?php esc_html_e('Yearly Archive', 'gildrest'); ?></div>
+    <div class="title-description"><?php esc_html_e('Yearly Archives', 'gildrest'); ?></div>
   </div>
 
 <?php elseif ( is_author() ): ?>
 
-  <?php esc_html_e( 'Author:', 'coldbox' );?>&#32;</span><?php the_author_meta( 'display_name' ); ?>
-  <?php the_author_meta( 'description' ); ?>
+  <div class="title-container title-container-author">
+    <div class="title"><?php esc_html_e('Archives', 'gildrest'); ?></div>
+    <div class="title-description"><?php esc_html_e('Author Archives', 'gildrest'); ?></div>
+  </div>
 
 <?php elseif ( is_404() ): ?>
 

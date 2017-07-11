@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-<div class="author-title">
-
-
-
-</div>
-
 <main class="main main-archive" id="js-main-archive">
   <section class="author-title">
     <div class="section-inner">
@@ -44,5 +38,7 @@
     </div>
   </section>
 </main>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

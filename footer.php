@@ -7,10 +7,10 @@
     <div class="copy-right"><p>&copy; <?php esc_html(date('Y'));?> <?php bloginfo('name'); ?></p></div>
     <div class="powerd-by">
       <p>
-        <?php esc_html_e('Proudly powered by ');?>
+        <?php esc_html_e('Proudly powered by ', 'gildrest');?>
         <a href="<?php echo esc_url('https://wordpress.org/');?>" target="_blank"><?php esc_html_e('WordPress', 'gildrest');?></a>
-        <?php esc_html_e('. Theme by ');?>
-        <a href="<?php echo esc_url('http://test.com');?>" target="_blank"><?php esc_html_e('Gild Themes', 'gildrest');?></a>
+        <?php esc_html_e('. Theme by ', 'gildrest');?>
+        <a href="<?php echo esc_url('https://wp-themes.gild.design/');?>" target="_blank"><?php esc_html_e('Gild Themes', 'gildrest');?></a>
       </p>
     </div>
   </div>

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sho-yamane/gild-rest#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",

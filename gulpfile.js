@@ -3,6 +3,20 @@ var basePaths = {
   dev: './src/'
 };
 
+var browserSyncWatchFiles = [
+  './dist/css/*.min.css',
+  './dist/js/*.min.js',
+  './img/*',
+  './**/*.php'
+];
+
+var browserSyncOptions = {
+  proxy: "http://rest-wp.dev",
+  notify: false,
+  open: 'external',
+  port: 9000
+};
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -19,7 +33,13 @@ var imagePath = {
 var gettext = require('gulp-gettext');
 var watch = require('gulp-watch');
 var notify = require('gulp-notify');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
+
+gulp.task('server', function() {
+  browserSync.init(browserSyncWatchFiles, browserSyncOptions);
+});
 
 gulp.task('sass', function() {
   gulp.src('./sass/*.scss')
@@ -62,7 +82,10 @@ gulp.task('gettext', function() {
 });
 
 //total
-gulp.task('go', ['sass', 'scripts', 'optimizeImage', 'gettext'], function () { });
+gulp.task('go', ['sass', 'scripts', 'optimizeImage'], function () { });
+
+//total + watch
+gulp.task('watch-bs', ['server', 'watch', 'scripts'], function () { });
 
 //watch
 gulp.task('watch', () => {

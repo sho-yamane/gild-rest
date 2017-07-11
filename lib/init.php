@@ -18,7 +18,10 @@ if (! function_exists('gildrest_init')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('customize-selective-refresh-widgets');
-		add_theme_support('post-formats', array('gallery'));
+
+		if ( ! isset( $content_width ) ) {
+				$content_width = 800;
+		}
 
   }
 }

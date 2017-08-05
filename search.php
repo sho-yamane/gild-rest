@@ -14,7 +14,7 @@
             <?php endwhile; ?>
           </div>
           <?php the_posts_pagination( array(
-            'format' => '/page/%#%',
+            'format' => '/page/%#%#js-main-index',
             'prev_text' => '<i class="fa fa-caret-left" aria-hidden="true"></i>',
             'next_text' => '<i class="fa fa-caret-right" aria-hidden="true"></i>',
           )); ?>

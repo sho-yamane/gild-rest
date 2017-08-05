@@ -712,7 +712,7 @@ footer.footer {
   }
   .sidebar-inner {
     background: #f7f7f7;
-    padding: 60px;
+    padding: 60px 60px 30px;
     @include mq() {
       padding: 30px 20px;
     }

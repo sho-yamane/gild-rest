@@ -62,10 +62,10 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'));
 
-  gulp.src(scripts)
+  /*gulp.src(scripts)
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./dist/js'));*/
 });
 
 gulp.task('optimizeImage', function() {

@@ -66,7 +66,7 @@
 					<div class="brdr brdr-bottom"></div>
 					<div class="brdr brdr-right"></div>
 					<div class="brdr brdr-top"></div>
-					<h2 class="description"><?php echo esc_attr( get_bloginfo('description', 'display')); ?></h2>
+					<h2 class="description"><?php bloginfo('description'); ?></h2>
 				</div>
 			<?php endif;?>
 

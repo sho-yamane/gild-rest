@@ -14,7 +14,7 @@ Twitter: @sho_yamane
 Email: mail@sho-yamane.me
 
 ## Copyright
-The Coldbox theme is 100% under the GNU General Public License v3.0.
+The GildRest theme is 100% under the GNU General Public License v3.0.
 URL: http://www.gnu.org/licenses/gpl-3.0.html
 
 ### FontAwesome License

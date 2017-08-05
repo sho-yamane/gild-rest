@@ -1,7 +1,7 @@
 <?php if ( is_category() ): ?>
 
   <div class="title-container">
-    <h1><?php echo single_cat_title(); ?></h1>
+    <h1><?php single_cat_title(); ?></h1>
     <div class="title-description"><?php esc_html_e('Category', 'gildrest'); ?></div>
   </div>
   <?php if (! empty(term_description())) : ?>

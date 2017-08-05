@@ -2332,7 +2332,6 @@ body {
   font-size: 10px;
   font-size: 1.0rem;
   line-height: 1;
-  position: relative;
   text-align: left;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -2692,6 +2691,20 @@ body {
     position: fixed;
     width: 100%;
     height: 100%; }
+  body.admin-bar header.header .logo {
+    position: absolute;
+    top: 62px; }
+    @media screen and (max-width: 1100px) {
+      body.admin-bar header.header .logo {
+        top: 42px; } }
+    @media screen and (max-width: 600px) {
+      body.admin-bar header.header .logo {
+        top: 56px; } }
+  body.admin-bar header.header nav.menu {
+    padding: 77px 30px 120px; }
+    @media screen and (max-width: 600px) {
+      body.admin-bar header.header nav.menu {
+        padding: 91px 30px 120px; } }
 
 ::-moz-selection {
   background: #D5A239;
@@ -2701,13 +2714,14 @@ body {
   background: #D5A239;
   color: #fff; }
 
-::-webkit-scrollbar-thumb {
-  background: #E2B633; }
+/*::-webkit-scrollbar-thumb{
+  background: $main_color;
+}
 
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 6px; }
-
+::-webkit-scrollbar{
+  background-color:transparent;
+  width:6px
+}*/
 p {
   font-size: 16px; }
   @media screen and (max-width: 1100px) {
@@ -2735,8 +2749,7 @@ img {
   transition: all 0.4s; }
 
 .sticky {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s; }
+  border: 2px solid #E2B633; }
 
 .screen-reader-text {
   clip: rect(1px 1px 1px 1px);
@@ -2744,8 +2757,7 @@ img {
   position: absolute; }
 
 header.header {
-  width: 100%;
-  position: relative; }
+  width: 100%; }
   header.header.header-top .header-inner {
     height: calc(100vh - 120px);
     -webkit-transition: all 0.4s;

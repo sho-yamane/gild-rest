@@ -1,7 +1,6 @@
 <?php
 
-function gildrest_comment($comment, $args, $depth) {
-  $GLOBALS['comment'] = $comment; ?>
+function gildrest_comment($comment, $args, $depth) { ?>
   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
     <div id="comment-<?php comment_ID(); ?>" class="comment-body">
 
@@ -12,7 +11,6 @@ function gildrest_comment($comment, $args, $depth) {
       </div>
 
       <div class="comment-right">
-
 
         <div class="comment-meta">
           <div class="comment-author-name">

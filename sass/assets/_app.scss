@@ -6,6 +6,7 @@ $background_light: #FCF8E9;
 $breakpoints: (
   'xs': 'screen and (max-width: 321px)',
   'sm': 'screen and (max-width: 480px)',
+  'admin-sp': 'screen and (max-width: 600px)',
   'column1': 'screen and (max-width: 672px)',
   'md': 'screen and (max-width: 768px)',
   'md-article': 'screen and (max-width: 840px)',
@@ -48,6 +49,26 @@ body {
     width: 100%;
     height: 100%;
   }
+  &.admin-bar {
+    header.header {
+      .logo {
+        position: absolute;
+        top: 62px;
+        @include mq() {
+          top: 42px;
+        }
+        @include mq(admin-sp) {
+          top: 56px;
+        }
+      }
+      nav.menu {
+        padding: 77px 30px 120px;
+        @include mq(admin-sp) {
+          padding: 91px 30px 120px;
+        }
+      }
+    }
+  }
 }
 
 ::selection {
@@ -55,14 +76,14 @@ body {
   color: #fff;
 }
 
-::-webkit-scrollbar-thumb{
+/*::-webkit-scrollbar-thumb{
   background: $main_color;
 }
 
 ::-webkit-scrollbar{
   background-color:transparent;
   width:6px
-}
+}*/
 
 p {
   font-size: 16px;
@@ -95,7 +116,7 @@ img {
 }
 
 .sticky {
-  transition: all 0.4s;
+  border: 2px solid $main_color;
 }
 
 .screen-reader-text {
@@ -106,7 +127,6 @@ img {
 
 header.header {
   width: 100%;
-  position: relative;
   &.header-top {
     .header-inner {
       height: calc(100vh - 120px);

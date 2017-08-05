@@ -4,7 +4,7 @@ if (! function_exists('gildrest_init')) {
   function gildrest_init() {
 
     // textdomain
-    load_theme_textdomain('gildrest', get_template_directory().'/lang/');
+    load_theme_textdomain('gildrest', get_template_directory().'/languages/');
 
     // add_theme_support
     add_theme_support('automatic-feed-links');

@@ -1,4 +1,4 @@
-# Coldbox
+# GildRest
 WordPress Theme GildRest by Sho Yamane
 Version: 1.0.0
 Requires at least: version 4.5 or higher

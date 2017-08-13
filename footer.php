@@ -10,7 +10,7 @@
         <?php esc_html_e('Proudly powered by ', 'gildrest');?>
         <a href="<?php echo esc_url('https://wordpress.org/');?>" target="_blank"><?php esc_html_e('WordPress', 'gildrest');?></a>
         <?php esc_html_e('. Theme by ', 'gildrest');?>
-        <a href="<?php echo esc_url('https://wp-themes.gild.design/');?>" target="_blank"><?php esc_html_e('Gild Themes', 'gildrest');?></a>
+        <a href="<?php echo esc_url('https://profiles.wordpress.org/shoyamane');?>" target="_blank"><?php esc_html_e('Gild Themes', 'gildrest');?></a>
       </p>
     </div>
   </div>
@@ -21,4 +21,3 @@
 </body>
 
 </html>
-

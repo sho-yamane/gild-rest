@@ -3,7 +3,7 @@
   <?php if(has_post_thumbnail()) : ?>
 	  <header class="post-header has-thumbnail">
       <div class="post-thumbnail">
-      	<?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
+      	<?php the_post_thumbnail($post->ID, 'large'); ?>
       </div>
   <?php else : ?>
     <header class="post-header">

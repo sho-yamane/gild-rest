@@ -1,9 +1,9 @@
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+  <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
   <?php if(has_post_thumbnail()) : ?>
 	  <header class="post-header has-thumbnail">
       <div class="post-thumbnail">
-      	<?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
+      	<?php the_post_thumbnail($post->ID, 'large'); ?>
       </div>
   <?php else : ?>
     <header class="post-header">
@@ -23,6 +23,15 @@
 	<div class="post-content">
 
 		<?php the_content(); ?>
+
+    <?php
+      wp_link_pages( array(
+        'before' => '<div class="post-links">',
+        'after'  => '</div>',
+        'link_before' => '<span>',
+        'link_after'  => '</span>',
+      ) );
+		?>
 
 	</div>
 

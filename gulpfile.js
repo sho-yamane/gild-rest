@@ -46,26 +46,26 @@ gulp.task('sass', function() {
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(gulp.dest('./dist/css'));
+    /*.pipe(rename({suffix: '.min'}))
+    .pipe(cssnano({discardComments: {removeAll: true}}))
+    .pipe(gulp.dest('./dist/css'));*/
 });
 
 gulp.task('scripts', function() {
   var scripts = [
     './js/app.js'
   ];
-  gulp.src(scripts)
+  /*gulp.src(scripts)
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(concat('app.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./dist/js'));*/
 
-  /*gulp.src(scripts)
+  gulp.src(scripts)
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('./dist/js'));*/
+    .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('optimizeImage', function() {
@@ -82,7 +82,7 @@ gulp.task('gettext', function() {
 });
 
 //total
-gulp.task('go', ['sass', 'scripts', 'optimizeImage'], function () { });
+gulp.task('go', ['sass', 'scripts'], function () { });
 
 //total + watch
 gulp.task('watch-bs', ['server', 'watch', 'scripts'], function () { });
@@ -91,6 +91,6 @@ gulp.task('watch-bs', ['server', 'watch', 'scripts'], function () { });
 gulp.task('watch', () => {
   gulp.watch('./sass/**/*',   ['sass']);
   gulp.watch('./js/*',        ['scripts']);
-  gulp.watch('./img/*',       ['optimizeImage']);
+  //gulp.watch('./img/*',       ['optimizeImage']);
   gulp.watch('./lang/*.po',   ['gettext']);
 });

@@ -15,7 +15,7 @@ if (! function_exists('gildrest_widgets_init')) {
 		register_sidebar( array(
 			'name'          => __('Bottom Widget', 'gildrest'),
 			'id'            => 'sidebar-1',
-			'description'   => 'Bottom Widget area',
+			'description'   => __('Bottom Widget area', 'gildrest'),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -24,4 +24,3 @@ if (! function_exists('gildrest_widgets_init')) {
 	}
 }
 add_action( 'widgets_init', 'gildrest_widgets_init' );
-

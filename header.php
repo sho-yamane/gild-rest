@@ -56,6 +56,8 @@
 			<?php $header_image = get_header_image(); ?>
 			<?php if (! empty($header_image)) : ?>
 				<div class="header-background" style="background-image: url(<?php header_image(); ?>);"></div>
+			<?php else: ?>
+				<div class="header-background"></div>
 			<?php endif;?>
 
 			<?php if (is_front_page() && is_home() && get_bloginfo('description')) : ?>

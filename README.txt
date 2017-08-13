@@ -14,7 +14,8 @@ Twitter: @sho_yamane
 Email: mail@sho-yamane.me
 
 ## Copyright
-The GildRest theme is 100% under the GNU General Public License v3.0.
+The GildRest WordPress Theme, Copyright 2017 Sho Yamane.
+The GildRest WordPress Theme is 100% under the GNU General Public License v3.0.
 URL: http://www.gnu.org/licenses/gpl-3.0.html
 
 ### FontAwesome License
@@ -37,3 +38,8 @@ Created by mirucon
 License - released under the terms of the GPL version 2 or (at your option) any later version
 URL: https://understrap.com/
 Created by holger1411
+
+### Header default picture Licence
+License - CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+URL: https://visualhunt.com/re/6edbb0
+Created by Visual Hunt(Unsplash)

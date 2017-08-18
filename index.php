@@ -5,7 +5,7 @@
   <section class="section">
     <div class="section-inner">
       <div class="section-title" id="js-section-title">
-        <h2><span>Archives</span></h2>
+        <h2><span><?php esc_html_e( 'Archives', 'gildrest' ); ?></span></h2>
       </div>
       <div class="section-content">
         <?php if ( have_posts() ) : ?>
